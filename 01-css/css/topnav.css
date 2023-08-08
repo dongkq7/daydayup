@@ -1,0 +1,22 @@
+.topnav {
+  height: 40px;
+  line-height: 40px;
+  background-color: #333;
+  color: #b0b0b0;
+  font-size: 12px;
+}
+
+.topnav-menu a{
+  padding:0 7px;
+  border-right: 1px solid #424242;
+}
+
+.topnav-menu li:first-child a {
+  padding-left: 0;
+}
+.topnav-menu li:last-child a {
+  border-right: none;
+}
+.topnav-menu li a:hover {
+  color: #fff;
+}
