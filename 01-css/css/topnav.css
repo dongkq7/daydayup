@@ -20,3 +20,40 @@
 .topnav-menu li a:hover {
   color: #fff;
 }
+
+.topnav-car {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  background-color: #424242;
+}
+.topnav-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.topnav-link .iconfont {
+  margin-right: 3px;
+}
+.topnav-detail {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 320px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  text-align: center;
+  z-index: 10;
+}
+.topnav-car:hover .topnav-detail {
+  display: block;
+}
+.topnav-car:hover .topnav-link {
+  background-color: #fff;
+  color: #ff6700;
+}
