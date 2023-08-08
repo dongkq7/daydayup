@@ -1,0 +1,18 @@
+.header {
+  height: 100px;
+  line-height: 100px;
+  background-color: #fff;
+}
+
+.header-logo {
+  width: 56px;
+  height: 56px;
+  margin-top: 22px;
+  margin-right: 172px;
+  background: url(../img/logo.png) no-repeat center/56px 56px;
+  text-indent: -9999px;
+}
+.header-menu a {
+  padding:0 7px;
+  font-size: 16px;
+}
