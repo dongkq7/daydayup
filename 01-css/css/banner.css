@@ -58,3 +58,60 @@
   background-color:rgba(255,255,255,0.3);
   border-color: rgba(0,0,0,0.4);
 }
+
+.banner-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 234px;
+  padding: 20px 0;
+  background-color: rgba(105,101,101,0.6);
+}
+
+.banner-menu-item {
+  height: 42px;
+  padding: 0 30px;
+  line-height: 42px;
+  color: #fff;
+  cursor: pointer;
+}
+.banner-menu-item:hover + .banner-sub-menu {
+  display: block;
+}
+
+.banner-menu-item:hover {
+  background-color: #ff6700;
+}
+
+.banner-menu-item i {
+  color: #fff;
+}
+
+.banner-sub-menu {
+  display: none;
+  position: absolute;
+  left: 233px;
+  top: 0;
+  bottom: 0;
+  background-color: #fff;
+}
+.banner-sub-menu {
+  width: 992px;
+}
+.banner-sub-menu a {
+  width: 25%;
+  height: 16.666%;
+  padding: 0 20px;
+}
+.banner-sub-menu img {
+  width: 40px;
+  height: 40px;
+  margin-top: 17px;
+}
+
+.banner-sub-menu span {
+  width: 154px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
