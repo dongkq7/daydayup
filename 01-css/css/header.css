@@ -14,7 +14,7 @@
 }
 
 .header-menu > a {
-  padding:0 7px;
+  padding:0 10px;
   font-size: 16px;
   line-height: 100px;
 }
@@ -27,7 +27,9 @@
   top: 100px;
   left: 0;
   right: 0;
+  z-index: 20;
   padding: 30px 0;
+  background: #fff;
   border-bottom: 1px solid #eee;
 }
 .header-submenu a {
@@ -52,4 +54,76 @@
 }
 .header-price  {
   color:#ff6700;
+}
+
+.header-search {
+  position: relative;
+  margin-top: 25px;
+}
+.header-search input {
+  height: 50px;
+  /* 也可以用text-indent设置，但是这种方式右边没有间隙 */
+  padding: 0 15px;
+  border: 1px solid #ccc;
+  /* 不去除的话聚焦会有外边框出现 */
+  outline: none;
+  font-size: 16px;
+}
+.header-search input:hover {
+  border-color: #aaa;
+}
+.header-search input:hover ~ .header-searchicon {
+  border-color: #aaa;
+}
+.header-search input:focus {
+  border-color: #ff6700;
+}
+.header-searchicon {
+  height: 50px;
+  width: 55px;
+  background: none;
+  border: 1px solid #ccc;
+  border-left: none;
+}
+
+.header-search input:focus ~ .header-searchicon {
+  border-color: #ff6700;
+}
+.header-searchicon {
+  cursor: pointer;
+}
+.header-searchicon i {
+  color: #616161;
+  font-size: 20px;
+}
+
+.header-searchicon:hover {
+  background-color: #ff6700;
+}
+
+.header-searchicon:hover i {
+  color: #fff;
+}
+
+.header-suggest {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 0;
+  border:1px solid #ff6700;
+  border-top: none;
+}
+.header-search input:focus ~ .header-suggest {
+  display: block;
+}
+.header-suggest a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+  color: #333;
+}
+.header-suggest a:hover {
+  background-color: #eee;
 }
