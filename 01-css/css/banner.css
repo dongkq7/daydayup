@@ -75,7 +75,7 @@
   color: #fff;
   cursor: pointer;
 }
-.banner-menu-item:hover + .banner-sub-menu {
+.banner-menu li:hover  .banner-sub-menu {
   display: block;
 }
 
@@ -90,16 +90,16 @@
 .banner-sub-menu {
   display: none;
   position: absolute;
-  left: 233px;
   top: 0;
   bottom: 0;
+  left: 234px;
+  width: 992px;
   background-color: #fff;
 }
-.banner-sub-menu {
-  width: 992px;
-}
+
 .banner-sub-menu a {
   width: 25%;
+  line-height: 76px;
   height: 16.666%;
   padding: 0 20px;
 }
