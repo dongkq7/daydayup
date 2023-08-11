@@ -11,34 +11,35 @@ Deck：一副扑克牌
 function Poker(number, color) {
   this.number = number;
   this.color = color;
-  this.print = function () {
-    if (this.number === 14) {
-      console.log("小王");
-      return;
-    }
-    if (this.number === 15) {
-      console.log("大王");
-      return;
-    }
-    var colors = ["♠", "♥", "♣", "♦"];
-    var numbers = [
-      "A",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "10",
-      "J",
-      "Q",
-      "K",
-    ];
-    console.log(colors[this.color - 1] + numbers[this.number - 1]);
-  };
 }
+
+Poker.prototype.print = function () {
+  if (this.number === 14) {
+    console.log("小王");
+    return;
+  }
+  if (this.number === 15) {
+    console.log("大王");
+    return;
+  }
+  var colors = ["♠", "♥", "♣", "♦"];
+  var numbers = [
+    "A",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "J",
+    "Q",
+    "K",
+  ];
+  console.log(colors[this.color - 1] + numbers[this.number - 1]);
+};
 
 function Deck() {
   this.pokers = [];
@@ -49,5 +50,11 @@ function Deck() {
   }
 }
 
+Deck.prototype.print = function () {
+  for (let i = 0; i < this.pokers.length; i++) {
+    this.pokers[i].print();
+  }
+};
+
 var deck = new Deck();
-console.log(deck);
+deck.print();
