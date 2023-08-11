@@ -49,14 +49,12 @@
   width: 234px;
   height: 300px;
   margin-right: 14px;
+  margin-bottom: 14px;
   background-color: #fff;
   text-align: center;
 }
 .sc-item:nth-child(4n) {
   margin-right: 0;
-}
-.sc-item:nth-child(-n+4) {
-  margin-bottom: 14px;
 }
 .sc-item img{
   width: 160px;
