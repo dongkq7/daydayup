@@ -3,18 +3,12 @@ var listDom = document.querySelector(".todo-list");
 var input = document.querySelector(".txt");
 
 function addTask(value) {
-  var li = document.createElement("li");
-  var span = document.createElement("span");
-  var button = document.createElement("button");
-  span.innerText = value;
-  button.innerText = "删除";
-  // 点击删除后，删除对应的待办事项
-  button.addEventListener("click", function () {
-    li.remove();
-  });
-  li.appendChild(span);
-  li.appendChild(button);
-  listDom.appendChild(li);
+  listDom.innerHTML += `
+    <li>
+      <span>${value}</span>
+      <button>删除</button>
+    </li>
+  `;
 }
 
 input.addEventListener("keydown", function (e) {
@@ -23,5 +17,12 @@ input.addEventListener("keydown", function (e) {
       addTask(this.value.trim());
       this.value = "";
     }
+  }
+});
+
+// 事件委托 - 点击删除按钮删除添加的任务
+listDom.addEventListener("click", function (e) {
+  if (e.target.tagName === "BUTTON") {
+    e.target.parentElement.remove();
   }
 });
