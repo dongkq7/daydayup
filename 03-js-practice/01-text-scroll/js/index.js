@@ -23,9 +23,9 @@ cloneElement()
 let timer = null
 const DURATION = 2000 // 多久滚动一次
 const SCROLL_TOTAL = 300 // 滚动动画时长
-const SCROLL_PRE_TIME = 10
+const SCROLL_PER_TIME = 10
 // 300毫秒动画执行完毕，10毫秒执行一次，需要执行30次
-const times = SCROLL_TOTAL / SCROLL_PRE_TIME
+const times = SCROLL_TOTAL / SCROLL_PER_TIME
 function scrollText() {
   setInterval(() => {
     // 计算需要从哪里滚动到哪里（为添加动画效果做准备）
@@ -46,7 +46,7 @@ function scrollText() {
         }
       }
       scrollBox.scrollTop = from
-    }, SCROLL_PRE_TIME)
+    }, SCROLL_PER_TIME)
   }, DURATION)
 }
 scrollText()
