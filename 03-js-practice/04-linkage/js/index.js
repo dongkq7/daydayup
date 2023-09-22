@@ -50,12 +50,14 @@ function createCityList(provinceValue) {
 function createSchoolList(cityValue) {
   // 清空上一次渲染的数据，防止下拉列表中存在上一次所渲染的数据
   schoolDom.innerHTML = ''
-  const schoolList = allSchool[cityValue]
-  const schoolFragment = document.createDocumentFragment()
-  schoolList.forEach(s => {
-    createOption(s,s,schoolFragment)
-  })
-  schoolDom.append(schoolFragment)
+  if(cityValue) {
+    const schoolList = allSchool[cityValue]
+    const schoolFragment = document.createDocumentFragment()
+    schoolList.forEach(s => {
+      createOption(s,s,schoolFragment)
+    })
+    schoolDom.append(schoolFragment)
+  }
 }
 
 /**
