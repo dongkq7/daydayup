@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        color: #666;
+        text-align: center;
+      }
+      .box {
+        width: 30px;
+        height: 30px;
+        background: #f40;
+        position: fixed;
+        left: 0;
+        top: 0;
+      }
+    </style>
+    <style>
+      .box {
+        transition: 0.5s;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ball" class="box"></div>
+    <p>在屏幕上点击任意位置试一试</p>
+    <script>
+      const ball = document.querySelector('#ball')
+      window.addEventListener('click', function(e) {
+        // ball.style.left = e.clientX - 15 + 'px'
+        // ball.style.top = e.clientY - 15 + 'px'
+        ball.style.transform = `translate(${e.clientX - 15}px, ${e.clientY - 15}px)`
+      })
+    </script>
+  </body>
+</html>
